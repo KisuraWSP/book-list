@@ -43,7 +43,7 @@ var (
 			json.NewEncoder(w).Encode(map[string]string{
 				"hx-redirect": "/",
 			})
-			return // <-- THIS IS THE FIX
+			return // <-- This ensures the redirect happens!
 		}
 		templ := template.Must(template.ParseFiles("add-book.html"))
 		templ.Execute(w, nil)
